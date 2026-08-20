@@ -1,167 +1,508 @@
-<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
-"http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
-
-<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
-
+<!doctype html>
+<html lang="en">
 <head>
-     <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Janvier Byiringiro — Software Engineer, Rwanda/Kigali RW</title>
+<meta name="description" content="Software engineer building products in Rwanda: real estate, mobility, fintech, government visa tools, and enterprise BSS systems." />
+<meta name="theme-color" content="#0B0E12" />
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;600;700&family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --bg: #0B0E12;
+    --bg-raised: #10141A;
+    --text: #E8EAED;
+    --text-dim: #8B949E;
+    --sage: #7C9885;
+    --sage-dim: #5C7566;
+    --amber: #F5A623;
+    --border: #2A2F38;
+    --border-soft: #1C2027;
+    --mono: 'JetBrains Mono', ui-monospace, monospace;
+    --sans: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+    --max: 880px;
+  }
 
-     <title>Janvier Byiringiro Resume</title>
+  *{ margin:0; padding:0; box-sizing:border-box; }
 
-     <style type="text/css">
-        * { margin: 0; padding: 0; }
-        body { font: 16px Helvetica, Sans-Serif; line-height: 24px; background: url(images/noise.jpg); color:white;}
-        .clear { clear: both; }
-        #page-wrap { width: 930px; margin: 40px auto 60px; }
-        #pic { float: right; margin: -30px 0 0 0; }
-        h1 { margin: 0 0 16px 0; padding: 0 0 16px 0; font-size: 40px; font-weight: bold; letter-spacing: -2px; border-bottom: 1px solid #999; }
-        h2 { font-size: 20px; margin: 0 0 6px 0; position: relative; }
-        h2 span { position: absolute; bottom: 0; right: 0; font-style: italic; font-family: Georgia, Serif; font-size: 16px; color: #999; font-weight: normal; }
-        span { font-style: italic; font-family: Georgia, Serif; font-size: 13px; color: #999; font-weight: bold; }
-        p { margin: 0 0 16px 0; }
-        a { color: #999; text-decoration: none; border-bottom: 1px dotted #999; }
-        a:hover { border-bottom-style: solid; color: yellow; }
-        ul { margin: 0 0 32px 17px; }
-        /* #objective { width: 500px; float: left; } */
-        #objective p { font-family: Georgia, Serif; font-style: italic; color: #fff; }
-        dt { font-style: italic; font-weight: bold; font-size: 18px; text-align: right; padding: 0 26px 0 0; width: 150px; float: left; height: 100px; border-right: 1px solid #999;  }
-        dd { width: 600px; float: right; }
-        dd.clear { float: none; margin: 0; height: 15px; }
-        ol li{ display: inline;}
-        @media (prefers-color-scheme: dark) {
-          body {
-            background: url(images/back1.jpg) no-repeat center center fixed;
-            background-size: cover;
-            color: #fff;
-          }
-        }
+  html{ scroll-behavior:smooth; }
 
-     </style>
+  @media (prefers-reduced-motion: reduce){
+    html{ scroll-behavior:auto; }
+    *{ animation-duration:0.001ms !important; animation-iteration-count:1 !important; transition-duration:0.001ms !important; }
+  }
+
+  body{
+    background:var(--bg);
+    color:var(--text);
+    font-family:var(--sans);
+    line-height:1.6;
+    -webkit-font-smoothing:antialiased;
+    background-image:
+      radial-gradient(ellipse 800px 500px at 50% -10%, rgba(124,152,133,0.10), transparent 60%),
+      linear-gradient(var(--border-soft) 1px, transparent 1px),
+      linear-gradient(90deg, var(--border-soft) 1px, transparent 1px);
+    background-size: auto, 48px 48px, 48px 48px;
+    background-position: 0 0, -1px -1px, -1px -1px;
+  }
+
+  a{ color:inherit; }
+
+  ::selection{ background:var(--sage); color:#0B0E12; }
+
+  :focus-visible{
+    outline: 2px solid var(--amber);
+    outline-offset: 3px;
+    border-radius: 2px;
+  }
+
+  .wrap{
+    max-width: var(--max);
+    margin: 0 auto;
+    padding: 0 24px;
+  }
+
+  /* ---------- Header / business card ---------- */
+
+  header{
+    padding: 72px 0 56px;
+    border-bottom: 1px solid var(--border-soft);
+  }
+
+  .card{
+    background: var(--bg-raised);
+    border: 1px solid var(--border);
+    border-radius: 10px;
+    padding: 36px 40px;
+    position: relative;
+    overflow: hidden;
+  }
+
+  .card::before{
+    content:"";
+    position:absolute;
+    top:0; left:0; right:0;
+    height: 1px;
+    background: linear-gradient(90deg, transparent, var(--sage), transparent);
+    opacity: 0.6;
+  }
+
+  .prompt-line{
+    font-family: var(--mono);
+    font-size: 13px;
+    color: var(--sage);
+    display:flex;
+    align-items:center;
+    gap:8px;
+    margin-bottom: 22px;
+  }
+
+  .dot{
+    width:8px; height:8px;
+    border-radius:50%;
+    background: var(--sage);
+    box-shadow: 0 0 0 3px rgba(124,152,133,0.15);
+    flex-shrink:0;
+  }
+
+  .cursor{
+    display:inline-block;
+    width: 7px; height: 15px;
+    background: var(--sage);
+    margin-left: 2px;
+    animation: blink 1.1s step-end infinite;
+    vertical-align: -2px;
+  }
+  @keyframes blink{ 50%{ opacity:0; } }
+
+  h1{
+    font-family: var(--sans);
+    font-weight: 800;
+    font-size: clamp(32px, 5vw, 46px);
+    letter-spacing: -0.02em;
+    line-height: 1.08;
+    margin-bottom: 6px;
+  }
+
+  .role{
+    font-size: 17px;
+    color: var(--text-dim);
+    margin-bottom: 28px;
+    max-width: 56ch;
+  }
+  .role strong{ color: var(--text); font-weight: 600; }
+
+  .meta-grid{
+    display:grid;
+    grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+    gap: 14px 28px;
+    font-family: var(--mono);
+    font-size: 13px;
+    padding-top: 24px;
+    border-top: 1px solid var(--border-soft);
+  }
+
+  .meta-item{ display:flex; flex-direction:column; gap:4px; }
+  .meta-label{ color: var(--text-dim); font-size:11px; text-transform:uppercase; letter-spacing:0.08em; }
+  .meta-value{ color: var(--text); }
+  .meta-value a:hover{ color: var(--sage); }
+
+  .links-row{
+    display:flex;
+    flex-wrap:wrap;
+    gap: 10px;
+    margin-top: 28px;
+  }
+
+  .pill{
+    font-family: var(--mono);
+    font-size: 12.5px;
+    padding: 8px 14px;
+    border: 1px solid var(--border);
+    border-radius: 999px;
+    color: var(--text-dim);
+    transition: border-color .15s ease, color .15s ease, transform .15s ease;
+    display:inline-flex;
+    align-items:center;
+    gap:6px;
+    text-decoration:none;
+  }
+  .pill:hover{
+    border-color: var(--sage-dim);
+    color: var(--text);
+    transform: translateY(-1px);
+  }
+  .pill.primary{
+    border-color: var(--amber);
+    color: var(--amber);
+  }
+  .pill.primary:hover{
+    background: var(--amber);
+    color: #0B0E12;
+  }
+
+  /* ---------- Section headers ---------- */
+
+  section{ padding: 64px 0; }
+
+  .section-head{
+    display:flex;
+    align-items:baseline;
+    gap:14px;
+    margin-bottom: 32px;
+  }
+
+  .section-tag{
+    font-family: var(--mono);
+    font-size: 12px;
+    color: var(--sage);
+    letter-spacing: 0.08em;
+  }
+
+  h2{
+    font-size: 24px;
+    font-weight: 700;
+    letter-spacing: -0.01em;
+  }
+
+  .section-sub{
+    font-family: var(--mono);
+    font-size: 12.5px;
+    color: var(--text-dim);
+    margin-left: auto;
+  }
+
+  /* ---------- Product grid ---------- */
+
+  .grid{
+    display:grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 18px;
+  }
+
+  .product{
+    background: var(--bg-raised);
+    border: 1px solid var(--border);
+    border-radius: 10px;
+    padding: 24px;
+    display:flex;
+    flex-direction:column;
+    gap: 14px;
+    text-decoration:none;
+    color: inherit;
+    transition: border-color .18s ease, transform .18s ease, box-shadow .18s ease;
+  }
+  .product:hover{
+    border-color: var(--sage-dim);
+    transform: translateY(-3px);
+    box-shadow: 0 12px 28px -14px rgba(0,0,0,0.6);
+  }
+
+  .product-top{
+    display:flex;
+    align-items:center;
+    justify-content:space-between;
+  }
+
+  .status{
+    font-family: var(--mono);
+    font-size: 11px;
+    color: var(--sage);
+    display:flex;
+    align-items:center;
+    gap:6px;
+    letter-spacing: 0.04em;
+  }
+  .status .dot{ width:6px; height:6px; box-shadow:0 0 0 2px rgba(124,152,133,0.15); }
+
+  .status.wip{ color: var(--amber); }
+  .status.wip .dot{ background: var(--amber); box-shadow:0 0 0 2px rgba(245,166,35,0.15); }
+
+  .arrow{
+    font-family: var(--mono);
+    color: var(--border);
+    transition: color .18s ease, transform .18s ease;
+  }
+  .product:hover .arrow{ color: var(--sage); transform: translate(2px,-2px); }
+
+  .product-name{
+    font-size: 19px;
+    font-weight: 700;
+    letter-spacing: -0.01em;
+  }
+
+  .product-url{
+    font-family: var(--mono);
+    font-size: 11.5px;
+    color: var(--text-dim);
+    margin-top: -8px;
+  }
+
+  .product-desc{
+    font-size: 14px;
+    color: var(--text-dim);
+    line-height:1.55;
+    flex-grow: 1;
+  }
+
+  .tags{
+    display:flex;
+    flex-wrap:wrap;
+    gap:6px;
+    margin-top: 4px;
+  }
+
+  .tag{
+    font-family: var(--mono);
+    font-size: 10.5px;
+    color: var(--sage);
+    background: rgba(124,152,133,0.08);
+    border: 1px solid rgba(124,152,133,0.22);
+    padding: 3px 8px;
+    border-radius: 5px;
+  }
+
+  /* ---------- Enterprise / stack strip ---------- */
+
+  .strip{
+    border-top: 1px solid var(--border-soft);
+    border-bottom: 1px solid var(--border-soft);
+    padding: 40px 0;
+  }
+
+  .strip-inner{
+    display:flex;
+    flex-wrap:wrap;
+    justify-content:space-between;
+    gap: 24px;
+    align-items:flex-start;
+  }
+
+  .strip-text{ max-width: 480px; }
+  .strip-text p{ color: var(--text-dim); font-size:14px; margin-top:8px; }
+
+  .stack{
+    display:flex;
+    flex-wrap:wrap;
+    gap:8px;
+    max-width: 340px;
+  }
+
+  .stack span{
+    font-family: var(--mono);
+    font-size: 11.5px;
+    color: var(--text-dim);
+    border: 1px solid var(--border);
+    padding: 5px 10px;
+    border-radius: 6px;
+  }
+
+  /* ---------- Footer ---------- */
+
+  footer{
+    padding: 48px 0 64px;
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    flex-wrap:wrap;
+    gap:16px;
+    font-family: var(--mono);
+    font-size: 12.5px;
+    color: var(--text-dim);
+  }
+
+  footer a:hover{ color: var(--sage); }
+
+  @media (max-width: 640px){
+    .card{ padding:28px 22px; }
+    header{ padding: 48px 0 40px; }
+    section{ padding: 44px 0; }
+    .section-sub{ display:none; }
+  }
+</style>
 </head>
-
 <body>
 
-    <div id="page-wrap">
+<div class="wrap">
 
-        <img src="images/by.png" alt="Photo of janvier" id="pic"/>
+  <header>
+    <div class="card">
+      <div class="prompt-line"><span class="dot"></span> whoami</div>
 
-        <div id="contact-info" class="vcard">
+      <h1>Janvier Byiringiro</h1>
+      <p class="role">
+        <strong>Software engineer &amp; entrepreneur</strong> based in Kigali, Rwanda —
+        I build full-stack products end to end, from the enterprise systems that keep
+        telecoms running to the apps people use every day.
+      </p>
 
-            <!-- Microformats! -->
-
-            <h1 class="fn">Janvier Byiringiro</h1>
-            <h5>Location: Kigali - Rwanda</h5>
-            <p>
-                Phone: <span class="tel">+250788310673</span><br />
-                Email: <a class="email" href="mailto:byjanvier@gmail.com">byjanvier@gmail.com</a> <br />
-                <ol>
-                  <li><a href="https://www.linkedin.com/in/byjanvier/" target="_blank"> Linkedin | </a></li>
-                  <li><a href="https://gitlab.com/u/janvier" target="_blank"> Gitlab </a> | </li>
-                  <li><a href="https://github.com/jenzzly?tab=repositories" target="_blank"> Github |</a> </li>
-                  <li><a href="images/pdf/janvier.pdf" target="_blank">Resume</a></li>
-                </ol>
-            </p>
+      <div class="meta-grid">
+        <div class="meta-item">
+          <span class="meta-label">Location</span>
+          <span class="meta-value">Kigali, Rwanda</span>
         </div>
-
-        <div id="objective">
-            <p>
-              I am person who likes to help such individual using various technology practices. I spent several years in the field, but I am at most very much interesting in creating tools myself using programming skills, and I love it! I spent most of my everyday researching ways to improve human lives with science. It's a fantastic route that I feel lucky to contribute in.
-              When I'm not working, I am usually doing outdoor activities with friends. I am very much a kid at heart, love to dance, editing video's or pictures and travel whenever I can.
-              I love to learn new things and meeting people. If you have an interesting theory please don't hesitate to share with me. I am delighted, and truly blessed to be part of the science family!
-            </p>
+        <div class="meta-item">
+          <span class="meta-label">Focus</span>
+          <span class="meta-value">Mobile &amp; web, fintech, enterprise BSS</span>
         </div>
+        <div class="meta-item">
+          <span class="meta-label">Currently</span>
+          <span class="meta-value">Building &amp; running OG Café, Kigali</span>
+        </div>
+      </div>
 
-        <div class="clear"></div>
+      <div class="links-row">
+        <a class="pill primary" href="mailto:byjanvier@gmail.com">✉ byjanvier@gmail.com</a>
+        <a class="pill" href="https://www.linkedin.com/in/byjanvier/" target="_blank" rel="noopener">LinkedIn</a>
+        <a class="pill" href="https://github.com/jenzzly" target="_blank" rel="noopener">GitHub</a>
+        <a class="pill" href="https://gitlab.com/u/janvier" target="_blank" rel="noopener">GitLab</a>
+        <a class="pill" href="images/pdf/janvier.pdf" target="_blank" rel="noopener">↓ Resume (PDF)</a>
+      </div>
+    </div>
+  </header>
 
-        <dl>
-            <dd class="clear"></dd>
-
-            <dt>Education</dt>
-            <dd>
-                <h2>St.Cloud State University - St.Cloud MN,US</h2>
-                <p><strong>Major:</strong> Information Technology Security<br />
-                   <strong>Minor:</strong> Computer Organization and Pogramming</p>
-            </dd>
-
-            <dd class="clear"></dd>
-
-            <dt>Languages</dt>
-            <dd>English,French & Kinyarwanda</dd>
-
-            <dd class="clear"></dd>
-
-            <dt>Experience</dt>
-            <dd>
-                <h2> IMS Global Ventures <span> DevOps:Sr.Support - Kigali, Rwanda - 2020</span></h2>
-                <h5>Environment: <span>AWS , Linux Distro, Github, Zabbix, Postgresql, Python, Docker, Kubernetes & Ansible</span></h5>
-                <ul>
-                  <li>See assigned tasks, client requests, event/ issue investigations and report requests through to resolution.</li>
-                  <li>This includes, but is not limited to:</li>
-                        o Server support
-                        o Service support
-                        o System support
-                  <li>Event identification, tracking, control/ resolution and reporting.</li>
-                  <li>Issue identification, troubleshooting/ resolution and reporting.</li>
-                  <li>Hardware and component testing.</li>
-                  <li>Testing of newly implemented/ deployed Servers, services and network environments (lab and production).</li>
-                  <li>Assist with applying patches to core servers</li>
-                  <li>Maintain logs on servers</li>
-                  <li>Generate daily, weekly and monthly reports</li>
-                  <li>Installation, configuration and maintenance of software across environments</li>
-                  <li>Assist with software deployment</li>
-                  <li>Assist with security updates and upgrades</li>
-                  <li>Execute database and server back-ups.</li>
-                  <li>Maintain an open line of communication with clients and team members regarding your assigned Requests/ Issues/ Events and Tasks.</li>
-                </ul>
-
-                <h2>Spark Microgrants <span>System Engineer - Musanze, Rwanda - 2019-2020</span></h2>
-                <h5>Environment: <span>AWS , Ubuntu, Github, Odoo, Jasper, Postgresql, Python, Javascript</span></h5>
-                <ul>
-                    <li>Own audit of Spark’s current system architecture and provide technical expertise on potential database redesign</li>
-                    <li>Own DevOps (G Suite, AWS, Infrastructure design)</li>
-                    <li>Lead database management in close collaboration with the RELM</li>
-                    <li>Collaboratively troubleshoot, fix bugs, and respond to requests using the Product Help Form</li>
-                    <li>Point of contact for current platform vendors(Africa’s Talking, etc..)</li>
-                    <li>Systems Support Process Ownership (Work closely with Technology Training Officers to manage training on Spark’s platforms</li>
-                    <li>Agile Software Development Lead (Participate in full agile process including updating One Pagers, estimating capacity, updating projects, contributing to daily stand up, and updating the team on changes in scope or
-                      deadlines as outlined by the Product Manager and Manage QA and testing of all development before release)</li>
-                </ul>
-
-                <h2>Inovalon Inc<span>Software Engineer - Bowie, MD, US - 2017-2019</span></h2>
-                <h5>Environment: <span>AWS , Ruby, Rails, Vuejs, HighChart, Postgresql, Jenkins, Jira</span></h5>
-                <p>The primary function is to anchor and develop Avalere’s growing Software Development team. Work across many of
-                Inovalon/ Avalere’s web and data tools in all stages of the software development life-cycle. As a software developer
-                you play a front row seat in shaping Inovalon solutions which are designed to solve complex healthcare problems. </p>
-                <ul>
-                    <li>Collaborate on high quality development efforts in support of Inovalon/Avalere product and service.</li>
-                    <li>Mentor team members on object-oriented design principles and patterns.</li>
-                    <li>Collaborate with product managers on defining user stories and advise on technical feasibility in prioritization
-                    discussions.</li>
-                    <li>Collaborate with a wide array of stakeholders on design and user research activities.</li>
-                    <li>Deliver working code by porting functions of the VCPS from legacy tech to RoR.</li>
-                </ul>
-            </dd>
-            <dd class="clear"></dd>
-            <dt>Development</dt>
-            <dd>
-              Tailwind CSS, Python, Flask, Vuejs, RoR, SpringBoot, Reactjs, Java J2EE, Bootstrap CSS
-            </dd>
-            <dd class="clear"></dd>
-            <dd class="clear"></dd>
-            <dt>Environment</dt>
-            <dd>
-              AWS , Linux Distro, Github, Zabbix, Postgresql, Python, Docker, Kubernetes & Ansible
-            </dd>
-            <dd class="clear"></dd>
-            <dt>Download</dt>
-            <dd><a href="images/pdf/janvier.pdf">CV PDF</a></dd>
-            <dd class="clear"></dd>
-        </dl>
-
-        <div class="clear"></div>
-
+  <section id="work">
+    <div class="section-head">
+      <span class="section-tag">01 · PRODUCTS</span>
+      <h2>Things I've shipped</h2>
+      <span class="section-sub">6 live projects</span>
     </div>
 
-</body>
+    <div class="grid">
 
+      <a class="product" href="https://murugo.work" target="_blank" rel="noopener">
+        <div class="product-top">
+          <span class="status"><span class="dot"></span>live</span>
+          <span class="arrow">↗</span>
+        </div>
+        <div class="product-name">Murugo</div>
+        <div class="product-url">murugo.work</div>
+        <p class="product-desc">An AI-powered service platform — bringing intelligent assistance to everyday tasks and workflows.</p>
+        <div class="tags"><span class="tag">AI</span><span class="tag">SaaS</span></div>
+      </a>
+
+      <a class="product" href="https://terraviser.com" target="_blank" rel="noopener">
+        <div class="product-top">
+          <span class="status"><span class="dot"></span>live</span>
+          <span class="arrow">↗</span>
+        </div>
+        <div class="product-name">TerraViser</div>
+        <div class="product-url">terraviser.com</div>
+        <p class="product-desc">Connects tenants and property owners through a transparent, managed rental platform built for long-term living in Rwanda.</p>
+        <div class="tags"><span class="tag">Real Estate</span><span class="tag">Marketplace</span></div>
+      </a>
+
+      <a class="product" href="https://rwandavisa.com" target="_blank" rel="noopener">
+        <div class="product-top">
+          <span class="status"><span class="dot"></span>live</span>
+          <span class="arrow">↗</span>
+        </div>
+        <div class="product-name">RwandaVisa</div>
+        <div class="product-url">rwandavisa.com</div>
+        <p class="product-desc">A guide to Rwanda's entry requirements — visa types, eligibility, and the application process, explained clearly for travelers.</p>
+        <div class="tags"><span class="tag">Travel</span><span class="tag">Info</span></div>
+      </a>
+
+      <a class="product" href="https://duotech.rw" target="_blank" rel="noopener">
+        <div class="product-top">
+          <span class="status"><span class="dot"></span>live</span>
+          <span class="arrow">↗</span>
+        </div>
+        <div class="product-name">DuoTech</div>
+        <div class="product-url">duotech.rw</div>
+        <p class="product-desc">Software and IT consultancy — custom builds and technical support for businesses in Rwanda.</p>
+        <div class="tags"><span class="tag">Consultancy</span><span class="tag">IT</span></div>
+      </a>
+
+      <div class="product">
+        <div class="product-top">
+          <span class="status wip"><span class="dot"></span>in progress</span>
+        </div>
+        <div class="product-name">Mobile Loan App</div>
+        <div class="product-url">unreleased</div>
+        <p class="product-desc">A mobile lending application — application flow, credit checks, and disbursement in one place.</p>
+        <div class="tags"><span class="tag">Fintech</span><span class="tag">Mobile</span></div>
+      </div>
+
+      <a class="product" href="https://tujyaneride.rw" target="_blank" rel="noopener">
+        <div class="product-top">
+          <span class="status"><span class="dot"></span>live</span>
+          <span class="arrow">↗</span>
+        </div>
+        <div class="product-name">TujyaneRide</div>
+        <div class="product-url">tujyaneride.rw</div>
+        <p class="product-desc">A ride-hailing platform connecting riders and drivers across Rwanda.</p>
+        <div class="tags"><span class="tag">Mobility</span><span class="tag">Marketplace</span></div>
+      </a>
+
+    </div>
+  </section>
+
+  <div class="strip">
+    <div class="wrap">
+      <div class="strip-inner">
+        <div class="strip-text">
+          <span class="section-tag">02 · ENTERPRISE</span>
+          <h2 style="margin-top:8px;">Behind the telecom stack</h2>
+          <p>Alongside my own products, I work on enterprise BSS systems for telecom — including MTN Rwanda's ZSmart stack — covering DB schemas, UI flows, and system integration architecture.</p>
+        </div>
+        <div class="stack">
+          <span>AWS</span><span>Docker</span><span>Kubernetes</span>
+          <span>Postgres</span><span>Python</span><span>Ruby on Rails</span>
+          <span>Vue.js</span><span>React</span><span>Flutter</span>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <footer>
+    <span>© 2026 Janvier Byiringiro — Kigali, Rwanda</span>
+    <span><a href="mailto:byjanvier@gmail.com">Get in touch →</a></span>
+  </footer>
+
+</div>
+
+</body>
 </html>
